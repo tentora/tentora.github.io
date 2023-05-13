@@ -1,0 +1,697 @@
+@charset "UTF-8";
+/*共通部分
+-----------------------------------*/
+html{
+  color: #0bd;font-size: 100%;
+}
+body{
+  font-family: "Yu Gothic Medium","游ゴシック Medium","YuGothic","游ゴシック体","ヒラギノ角ゴ Pro W3","sans-serif";
+  line-height: 1.7;
+  color: #432;
+}
+a{text-decoration: none;
+}
+img{
+  max-width: : 100%;
+  width:100%;
+  height:auto;
+}
+.logo{
+  width: 100px;
+  margin-top: 50px;
+}
+.menu-bar{
+  display: none;
+}
+.main-nav{
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-top: 80px;
+  list-style: none;
+  font-weight: bold;
+}
+.main-nav li{
+  border-bottom: #0bd 2px solid;
+  margin-left: 20px;
+}
+.main-nav a{
+  color:#432;
+}
+.main-nav a:hover{
+  color: #0bd;
+  text-shadow: 2px 2px 0 white;
+}
+.page-header{display: flex;
+  justify-content: space-between;
+}
+.wrapper{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+.nav-child-menus{
+  position: absolute;
+  visibility: hidden;
+  list-style: none;
+  padding-top: 10px;
+}
+.nav-child-menus li{
+  border-bottom: none;
+  margin-right: 20px;
+}
+.navCM-show{
+  visibility: visible;
+  transition-duration: 1s;
+  color: #432;
+}
+.fas{
+  padding-left: 5px;
+  cursor: pointer;
+}
+.remark{
+  color:#432;
+  background-color:#fff;
+  border:solid 1px tomato;
+  border-radius: 10px;
+  box-shadow:4px 4px 10px tomato;
+}
+.remark h2{
+  border-bottom:2px dotted tomato;
+  background-color:none;
+}
+.remark p{
+  padding:0 30px;
+}
+/*フッターが浮かないように*/
+.wrapper2{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+  min-height: 60vh;
+}
+.news-menu{
+  border-bottom: 1px #0bd solid;
+}
+.a-style{
+  color:#0bd;
+}
+.a-style:hover{
+  color:tomato;
+}
+.to-top{
+  position: fixed;
+  width: 80px;
+  border: black 1px;
+  background-color: #0bd;
+  z-index: 1;
+  color: black;
+  text-align:center;
+}
+/*HOME
+----------------------------------------------*/
+.home-content{
+  text-align: center;
+  margin-top: 7%;
+}
+.home-content p{
+  font-size: 1.125rem;
+  margin:10px 0 42px;
+}
+/*見出し*/
+.page-title{
+  font-size: 3rem;
+  font-family: 'Philosopher',serif;
+  text-transform: uppercase;
+  font-weight: heavy;
+  padding-top: 10px;
+}
+/*ボタン*/
+.button{
+  font-size: 1.357rem;
+  background: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+.button:hover{
+  background: #0090aa;
+}
+/*大きな背景画像*/
+.big-bg{
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat
+}
+#home{background-image: url(../images/main-bg.jpg);
+  min-height: 100vh;
+}
+#home .page-title{
+  text-transform: uppercase;
+}
+.sub-nav {display: flex;
+  justify-content: flex-start;
+  font-size: 1.25rem;
+  text-transform: none;
+  margin-top:34px;
+  list-style: none;
+}
+.sub-nav li{margin-left: 36px;
+}
+.sub-nav a{color: #123;
+}
+/*NEWS
+---------------------------------------------------*/
+#top-bg{
+  background-image: url(../images/news-bg.jpg);
+  height: 300px;
+}
+.page-title{
+  text-align: center;
+  margin-top: 20px;
+}
+/*フッター
+----------------------------------------------------------*/
+footer{
+  width: 100%;
+  background: #432;
+  text-align: center;
+  padding: 26px 0;
+}
+footer p{
+  color: #fff;
+  font-size: 0.875rem
+}
+/*記事部分*/
+article{
+  width:74%;
+}
+aside{
+  width: 22%;
+}
+.news-contents{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.post-info{
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 40px;
+  margin-top:30px;
+}
+.post-date{
+  background: #0bd;
+  border-radius: 50%;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  font-size: 1.625rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+}
+.post-date span{
+  font-size: 1rem;
+  border-top: 1px rgba(255,255,255,.5) solid;
+  padding-top: 6px;
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+.post-title{
+  font-family: "Yu Mincho","YuMincho","serif";
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+}
+.post-title,
+.post-cat{
+  margin-left: 120px;
+}
+article img{
+  margin-bottom: 20px;
+  width: 700px;
+}
+article p{
+  margin-bottom: 1rem;
+}
+.sub-title{
+  font-size: 1.357rem;
+  padding: 2px 8px 8px;
+  border-bottom: 2px #0bd solid;
+  font-weight: normal;
+}
+aside p{
+  padding: 12px 10px;
+}
+.sub-menu{
+  margin-bottom: 60px;
+  list-style: none;
+  text-align: center;
+}
+.sub-menu li{
+  border-bottom: 1px #ddd solid;
+}
+.sub-menu a{
+  color: #432;
+  padding: 10px;
+  display: block;
+}
+.sub-menu a:hover{
+  color: #0bd;
+}
+/*NEWS/..html共通
+------------------------------------------------------------*/
+.cat-title{
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+}
+.cat-title h3{
+  background-image: linear-gradient(#0bd,white,#0bd);
+  background-blend-mode: soft-light;
+  width: 100%;
+  font-weight: normal;
+}
+.cat-title p{
+  font-size: 1.5rem;
+  margin: 50px 0 50px 150px;
+  padding-bottom: 20px;
+  width: 80%;
+  border-bottom: 1px #000005 solid;
+}
+/*INTRO
+--------------------------------------------------------*/
+.intro-contents{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:50px;
+  margin-top: 50px;
+  flex-direction: row;
+}
+.pastor-name{
+  border-bottom: #bc917f 2px solid;
+  text-align: left;
+  padding-bottom:10px;
+  margin-bottom: 10px;
+}
+.pastor-img{
+  width: 180px;
+  margin:50px 30px 0 0;
+  float: left;
+}
+.pastor-info2{
+  padding-right: 50px;
+}
+.pastor-info2:last-child{
+  padding-right: 0;
+}
+.pastor-img2{
+  width:500px;
+}
+.pastor-info{
+  border-bottom: #bc917f 2px solid;
+  padding-bottom: 20px;
+}
+.pastor-article{
+  font-size: 16px;
+}
+.index{
+  font-size: 20px;
+  padding: 10px 0;
+}
+.pastor-container{
+  margin-top:100px;
+}
+/*WORSHIP
+----------------------------------------------*/
+.worship-title{
+  font-size: 2rem;
+  text-align: center;
+  background-image: radial-gradient(white,#0bd8);
+  background-blend-mode: hard-light;
+  border-radius: 30px;
+  border: #f7efa2 solid 5px;
+}
+.worship-title h2{
+  border-bottom: dotted  #f7efa2 4px;
+
+}
+.worship-sub{
+  font-style: "YuMincho","Yu Mincho",serif;
+  font-weight: normal;
+  font-size:1.5rem;
+  margin-top: 50px;
+  border-bottom: #0bd solid 2px;
+}
+.worship-article{
+  font-style: "YuMincho","Yu Mincho",serif;
+  margin-top:20px;
+  line-height: 1.7;
+  font-size:1.25rem;
+  padding-bottom: 20px;
+}
+
+.worship-sub li{
+  border: #d7c3bb solid 2px;
+  list-style-position: inside;
+  background: #0bd2;
+}
+
+/*INQUIRY
+-------------------------------------*/
+#location{
+  padding:4% 0;
+}
+#location .sub-title{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: heavy;
+  margin-bottom: 50px;
+}
+.location-info{
+  text-align: center;
+}
+.location-info p{
+  margin-bottom: 20px;
+}
+.map{
+  width:40vw;
+  height:30vw
+}
+/*MESSAGES
+-------------------*/
+.message-contents{
+  margin-top:50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.message-list{
+  list-style: none;
+  margin-top: 30px;
+}
+.message-link{
+  font-size: 1.25rem;
+  border-top:1px solid #009bc6;
+  border-bottom: 1px solid #009bc6;
+  padding-bottom: 10px;
+  background-color: #eaf6fd;
+  list-style: none;
+  padding-top:10px;
+  color:black;
+}
+.message-link-title{
+  font-size: 1.25rem;
+  border-top:1px solid #009bc6;
+  border-bottom: 1px solid #009bc6;
+  padding-bottom: 10px;
+  background-color: #0bd;
+  list-style: none;
+  padding-top:10px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  margin: 0;
+}
+.message-link:hover{
+  cursor: pointer;
+  transition: 0.2s;
+  color:#0bd;
+}
+.message-link em{
+  font-weight: bold;
+  font-size: 23px;
+}
+.message-type{
+  border-bottom:1px solid #0bd;
+  border-top:1px solid #0bd;
+  background-color: #eaf6fd;
+  margin:30px 0 20px 0;
+  text-align:center;
+}
+.message-title{
+  margin-bottom: 10px;
+}
+.sub-link{
+  border-bottom: 1px solid #0bd;
+  list-style: none;
+  font-size: 16px;
+  background-color: #eaf6fd;
+  color:black;
+  padding-left: 0px;
+  margin: auto;
+}
+.audio{
+  width: 600px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.sub-title a:hover{
+  color: #0bd;
+}
+.resume-main-title{
+  text-shadow: 3px 3px 5px #6d777b;
+  font-style: italic;
+}
+.resume-content1{
+  margin-left: 10px;
+}
+.resume-content2{
+  margin-left: 25px;
+}
+.resume-content3{
+  margin-left:46px;
+}
+.resume-title{
+  margin-bottom: 20px;
+}
+.resume-container{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.template{
+  width: 300px;
+  height: 500px;
+}
+/*GUIDE
+-----------------------------------------*/
+.guide-container{
+  margin-top: 100px
+}
+.guide-exp{
+  font-size:1.5rem;
+  margin-bottom: 100px;
+  padding-bottom: 10px;
+  border-bottom: #0bd dotted 5px;
+}
+.guide-q{
+  border-bottom: solid #f8eb65 5px;
+  border
+  font-size:1.25rem;
+  margin-bottom: 10px;
+  background-color: #c0db75;
+  border-radius: 10px;
+  list-style: none;
+  color:
+}
+.guide-a{
+  font-size:1.25rem;
+  margin-bottom: 30px;
+  list-style: none;
+}
+/*モバイル版
+-----------------------------------------*/
+@media (max-width:1100px){
+  #top-bg{
+    height: 300px;
+  }
+  .page-title{
+    font-size: 2.5rem;
+    border-bottom: #0bd solid 2px;
+    border-radius: 100px;
+    margin-top: 130px;
+  }
+  .remark{
+    width: 80vw;
+    margin: 0 auto;
+  }
+  /*HEADER*/
+  .nav-container{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+  }
+  .main-nav{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap:5px;
+    margin-top: 0;
+    padding-top:20px;
+    padding-bottom: 20px;
+    background-color: #432;
+    border-bottom: #a6ce39 solid 5px;
+  }
+  .menu-bar{
+    position: fixed;
+    right: 20px;
+    top:5px;
+    width:40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+  }
+  .belt{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 70px;
+    background-color: #432;
+    border-bottom: solid #a6ce39 5px;
+    z-index: 2;
+  }
+  .logo{
+    position: fixed;
+    left:20px;
+    top:-10px;
+    width:60px;
+  }
+  .show{
+    top:70px;
+    transition-duration: 1s;
+  }
+  .hide{
+    top:-130px;
+    transition-duration: 1s;
+  }
+  .main-nav li{
+    text-align: center;
+    border: none;
+  }
+  .main-nav a{
+    color:#fff;
+  }
+  .page-header{
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo{
+    margin-top: 0;
+  }
+  .nav-child-menus{
+    background-color:#443322;
+    border: #a6ce39 5px solid;
+    width:160px;
+  }
+  .nav-child-menus li{
+    padding-bottom:5px;
+    border-bottom: 1px solid #a6ce39;
+  }
+  .fas{
+    color: #fff;
+  }
+  /*home*/
+  .home-title{
+    margin-top: 200px;
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+  }
+  /*NEWS*/
+  .news-contents{
+    flex-direction: column;
+  }
+  article,
+  aside{
+    width: 100%;
+  }
+  #news .page-title{
+    margin-top: 30px;
+  }
+  aside{
+    margin-top: 60px;
+  }
+  .post-info{
+    margin-bottom: 30px;
+  }
+  .post-date{
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+    margin-top: 50px;
+  }
+  .post-date span{
+    font-size: 0.875rem;
+    padding-top: 2px;
+
+  }
+  .post-title{
+    font-size: 1.375rem;
+    margin-top: 50px;
+  }
+  .post-cat{
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+  .post-title,
+  .post-cat{
+    margin-left: 80px;
+  }
+  .cat-title p{
+    margin: 0 auto;
+    width:100%;
+    padding-top: 20px;
+    font-size:1.25rem;
+  }
+  .cat-title{
+    margin-top: 100px;
+  }
+  /*intro*/
+  .intro-contents{
+    flex-direction: column;
+  }
+  .pastor-info{
+    margin-top: 50px;
+  }
+  .pastor-info2{
+    margin: 0 auto;
+  }
+  .pastor-name{
+    font-size: 1.25rem;
+  }
+  .pastor-img2{
+    width:80vw;
+    background-position: center top;
+  }
+  /*worship*/
+  .worship-title{
+    margin-top: 10px;
+  }
+  /*location*/
+  .map{
+    width:80vw;
+    height:50vw;
+  }
+  /*messages*/
+
+/*guide*/
+.guide-container{
+  margin-top: 10px;
+}
+.guide-exp{
+  margin-bottom: 10px;
+}
+.audio{
+  width: 80vw;
+}
+.template{
+  width: 80vw;
+  position: relative;
+}
+}
+  /*------------------------モバイル版ここまで*/
